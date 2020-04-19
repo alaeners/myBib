@@ -13,7 +13,19 @@ class LoginBibView: UIView {
     var singUpBlock: (() -> Void)?
     var singInBlock: (() -> Void)?
 
+    ///Eu gosto de usar stackview porque facilita o posicionamento dos objetos na tela
+    private var stackViewVertical: UIStackView = {
+        let stack = UIStackView()
+        stack.
+        return stack
+    }()
+
     #warning("Por que eu estou usando lazy para criar os elementos de UI?")
+    private lazy var logoBib: UIImageView = {
+        let image = UIImageView()
+        return image
+    }()
+
     private lazy var userAccess: UITextField = {
         let textfield = UITextField()
         return textfield

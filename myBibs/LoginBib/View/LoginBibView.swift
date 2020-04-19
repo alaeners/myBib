@@ -16,7 +16,8 @@ class LoginBibView: UIView {
     ///Eu gosto de usar stackview porque facilita o posicionamento dos objetos na tela
     private var stackViewVertical: UIStackView = {
         let stack = UIStackView()
-        stack.
+        stack.axis = .vertical
+        stack.alignment = .center
         return stack
     }()
 

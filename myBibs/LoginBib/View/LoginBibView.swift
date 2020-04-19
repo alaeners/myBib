@@ -34,7 +34,7 @@ class LoginBibView: UIView {
         return button
     }()
 
-    #warning("Por que eu teho que usar um init e um required init?")
+    #warning("Por que eu tenho que usar um init e um required init?")
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setup()
@@ -44,6 +44,7 @@ class LoginBibView: UIView {
         return nil
     }
 
+    ///método onde eu configuro como a minha view vai aparecer e chamo ele no init(colocando nela apenas um método)
     private func setup() {
         buildHierarchy()
         addConstraints()

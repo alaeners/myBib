@@ -18,6 +18,6 @@ class ViewController: UIViewController {
     @IBAction func star(_ sender: Any) {
         #warning("por que a minha navigationController está retornando nil quando eu coloco push?")
         let novoViewController = LoginBibViewController(contentView: LoginBibView())
-        self.present(novoViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(novoViewController, animated: true)
     }
 }

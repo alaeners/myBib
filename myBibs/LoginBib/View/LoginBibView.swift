@@ -17,6 +17,7 @@ class LoginBibView: UIView {
     ///Eu gosto de usar stackview porque facilita o posicionamento dos objetos na tela
     private var stackViewVertical: UIStackView = {
         let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.alignment = .center
         stack.backgroundColor = .white
@@ -26,32 +27,46 @@ class LoginBibView: UIView {
     #warning("Por que eu estou usando lazy para criar os elementos de UI?")
     private lazy var logoBib: UIImageView = {
         let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage.logo
         return image
+    }()
+
+    private lazy var descriptionLogin: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = Strings.descriptionLogin
+        return label
     }()
 
     private lazy var userAccess: UITextField = {
         let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.borderStyle = .roundedRect
         return textfield
     }()
 
     private lazy var passAccess: UITextField = {
         let textfield = UITextField()
+        textfield.translatesAutoresizingMaskIntoConstraints = false
         return textfield
     }()
 
     private lazy var singIn: UIButton = {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     private lazy var singUp: UIButton = {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
     private lazy var forgotAccess: UIButton = {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
 
@@ -81,6 +96,7 @@ class LoginBibView: UIView {
     private func buildHierarchy() {
         addSubview(stackViewVertical)
         stackViewVertical.addArrangedSubview(logoBib)
+        stackViewVertical.addArrangedSubview(descriptionLogin)
         stackViewVertical.addArrangedSubview(userAccess)
         stackViewVertical.addArrangedSubview(passAccess)
         stackViewVertical.addArrangedSubview(singIn)
@@ -89,7 +105,12 @@ class LoginBibView: UIView {
     }
 
     ///método de inserção de constraints
-    private func addConstraints() {}
+    private func addConstraints() {
+        stackViewVertical.topAnchor.constraint(equalTo: self.topAnchor, constant: Metrics.Spacing.large).isActive = true
+        stackViewVertical.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Metrics.Spacing.large).isActive = true
+        stackViewVertical.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        stackViewVertical.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    }
 
     @objc private func singUpAction() {
         singUpBlock?()

@@ -11,6 +11,7 @@
 		431CE44A244CCCE90016AB46 /* Image+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE449244CCCE90016AB46 /* Image+Login.swift */; };
 		431CE44C244CCD0E0016AB46 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431CE44B244CCD0E0016AB46 /* Metrics.swift */; };
 		431CE451244CCD720016AB46 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 431CE450244CCD720016AB46 /* Localizable.strings */; };
+		43B3D199244CD17A002C75AF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B3D198244CD17A002C75AF /* Strings.swift */; };
 		43B5C6C1244CA62C00AEFA1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6C0244CA62C00AEFA1F /* AppDelegate.swift */; };
 		43B5C6C3244CA62C00AEFA1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6C2244CA62C00AEFA1F /* SceneDelegate.swift */; };
 		43B5C6C5244CA62C00AEFA1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B5C6C4244CA62C00AEFA1F /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		431CE449244CCCE90016AB46 /* Image+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Login.swift"; sourceTree = "<group>"; };
 		431CE44B244CCD0E0016AB46 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 		431CE450244CCD720016AB46 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		43B3D198244CD17A002C75AF /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		43B5C6BD244CA62C00AEFA1F /* myBibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B5C6C0244CA62C00AEFA1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43B5C6C2244CA62C00AEFA1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				431CE447244CCCDB0016AB46 /* Strings+Login.swift */,
 				431CE450244CCD720016AB46 /* Localizable.strings */,
+				43B3D198244CD17A002C75AF /* Strings.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B5C6C5244CA62C00AEFA1F /* ViewController.swift in Sources */,
+				43B3D199244CD17A002C75AF /* Strings.swift in Sources */,
 				43B5C6C1244CA62C00AEFA1F /* AppDelegate.swift in Sources */,
 				431CE448244CCCDB0016AB46 /* Strings+Login.swift in Sources */,
 				43B5C6D5244CA6AD00AEFA1F /* LoginBibView.swift in Sources */,

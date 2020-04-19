@@ -1,5 +1,5 @@
 //
-//  Strings+Login.swift
+//  Strings.swift
 //  myBibs
 //
 //  Created by Alaene Rufino de Sousa on 19/04/20.
@@ -7,7 +7,4 @@
 //
 
 import Foundation
-
-extension Strings {
-    static let descriptionLogin: String = NSLocalizedString("description.login", comment: "")
-}
+enum Strings {}

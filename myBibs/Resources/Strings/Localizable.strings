@@ -18,6 +18,7 @@
 "button.list" = "listar";
 
 //Description Strings
+"description.login" = "seja bem vindo ao myBib!";
 
 //Placeholder Strings
 "placeholder.user" = "e-mail";

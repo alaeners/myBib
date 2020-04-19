@@ -6,4 +6,12 @@
 //  Copyright © 2020 Alaene Rufino de Sousa. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIImage {
+    class var logo: UIImage {
+        return UIImage(named: "logo")!
+    }
+}
+
+

@@ -55,6 +55,12 @@ class LoginBibView: UIView {
         return button
     }()
 
+    ///Caso precise ajustar os espaços, usarei esse elemento
+    private lazy var view: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     #warning("Por que eu tenho que usar um init e um required init?")
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -72,7 +78,15 @@ class LoginBibView: UIView {
     }
 
     ///construir hierarquia é fazer com que os elementos sejam colocados na view e possam ser usados.
-    private func buildHierarchy() {}
+    private func buildHierarchy() {
+        addSubview(stackViewVertical)
+        stackViewVertical.addArrangedSubview(logoBib)
+        stackViewVertical.addArrangedSubview(userAccess)
+        stackViewVertical.addArrangedSubview(passAccess)
+        stackViewVertical.addArrangedSubview(singIn)
+        stackViewVertical.addArrangedSubview(singUp)
+        stackViewVertical.addArrangedSubview(forgotAccess)
+    }
 
     ///método de inserção de constraints
     private func addConstraints() {}

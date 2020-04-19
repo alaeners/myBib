@@ -21,15 +21,16 @@ class LoginBibViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        viewDidLoad()
+        super.viewDidLoad()
         setup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        viewWillAppear(animated)
+        super.viewWillAppear(animated)
     }
 
     private func setup() {
+        view.backgroundColor = .blue
         contentSetup()
     }
 

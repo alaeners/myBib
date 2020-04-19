@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  myBibs
+
+  Created by Alaene Rufino de Sousa on 19/04/20.
+  Copyright © 2020 Alaene Rufino de Sousa. All rights reserved.
+*/
+
+//Common String
+
+//Button Strings
+"button.singin" = "entrar";
+"button.singup" = "cadastrar";
+"button.forgot" = "esqueci meus acessos";
+"button.save" = "salvar";
+"button.edit" = "editar";
+"button.delete" = "excluir";
+"button.list" = "listar";
+
+//Description Strings
+
+//Placeholder Strings
+"placeholder.user" = "e-mail";
+"placeholder.user" = "senha";

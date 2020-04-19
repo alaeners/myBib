@@ -9,16 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+
     #warning("Esse método tem que sumir, mas isso pode ser depois")
     @IBAction func star(_ sender: Any) {
-        #warning("por que a minha navigationController está retornando nil?")
+        #warning("por que a minha navigationController está retornando nil quando eu coloco push?")
         let novoViewController = LoginBibViewController(contentView: LoginBibView())
         self.present(novoViewController, animated: true, completion: nil)
     }
 }
-

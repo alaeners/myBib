@@ -12,12 +12,14 @@ class LoginBibView: UIView {
     ///variável pública para eu poder manipular pela controller sem dar muito acesso a minha view por aplicações externas, quando se aplica esse conceito.
     var singUpBlock: (() -> Void)?
     var singInBlock: (() -> Void)?
+    var forgotBlock: ((String) -> Void)?
 
     ///Eu gosto de usar stackview porque facilita o posicionamento dos objetos na tela
     private var stackViewVertical: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.alignment = .center
+        stack.backgroundColor = .white
         return stack
     }()
 
@@ -29,6 +31,7 @@ class LoginBibView: UIView {
 
     private lazy var userAccess: UITextField = {
         let textfield = UITextField()
+        textfield.borderStyle = .roundedRect
         return textfield
     }()
 
@@ -43,6 +46,11 @@ class LoginBibView: UIView {
     }()
 
     private lazy var singUp: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+
+    private lazy var forgotAccess: UIButton = {
         let button = UIButton()
         return button
     }()
@@ -75,5 +83,9 @@ class LoginBibView: UIView {
 
     @objc private func singInAction() {
         singInBlock?()
+    }
+
+    @objc private func forgotAction(type: String) {
+        forgotBlock?(type)
     }
 }

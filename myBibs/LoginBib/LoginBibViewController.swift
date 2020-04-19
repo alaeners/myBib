@@ -6,4 +6,45 @@
 //  Copyright © 2020 Alaene Rufino de Sousa. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class LoginBibViewController: UIViewController {
+    var contentView: LoginBibView
+
+    init(contentView: LoginBibView) {
+        self.contentView = contentView
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        return nil
+    }
+
+    override func viewDidLoad() {
+        viewDidLoad()
+        setup()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        viewWillAppear(animated)
+    }
+
+    private func setup() {
+        contentSetup()
+    }
+
+    #warning("Qual a diferença entre weak e unowned")
+    private func contentSetup() {
+        contentView.singInBlock = { [unowned self] in
+            print("devia acontecer alguma coisa aqui")
+        }
+
+        contentView.singUpBlock = { [unowned self] in
+            print("devia acontecer alguma coisa aqui")
+        }
+
+        contentView.forgotBlock = { [unowned self] type in
+            print("devia acontecer alguma coisa aqui")
+        }
+    }
+}

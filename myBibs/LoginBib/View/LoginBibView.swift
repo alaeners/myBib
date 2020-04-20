@@ -15,12 +15,13 @@ class LoginBibView: UIView {
     var forgotBlock: ((String) -> Void)?
 
     ///Eu gosto de usar stackview porque facilita o posicionamento dos objetos na tela
-    private var stackViewVertical: UIStackView = {
+    private var stackVertical: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.alignment = .center
-        stack.backgroundColor = .white
+//        stack.distribution = .fill
+//        stack.alignment = .center
+        stack.backgroundColor = .red
         return stack
     }()
 
@@ -28,7 +29,8 @@ class LoginBibView: UIView {
     private lazy var logoBib: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage.logo
+        image.image = .logo
+        image.contentMode = .scaleAspectFit
         return image
     }()
 
@@ -42,7 +44,6 @@ class LoginBibView: UIView {
     private lazy var userAccess: UITextField = {
         let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
-        textfield.borderStyle = .roundedRect
         return textfield
     }()
 
@@ -94,22 +95,20 @@ class LoginBibView: UIView {
 
     ///construir hierarquia é fazer com que os elementos sejam colocados na view e possam ser usados.
     private func buildHierarchy() {
-        addSubview(stackViewVertical)
-        stackViewVertical.addArrangedSubview(logoBib)
-        stackViewVertical.addArrangedSubview(descriptionLogin)
-        stackViewVertical.addArrangedSubview(userAccess)
-        stackViewVertical.addArrangedSubview(passAccess)
-        stackViewVertical.addArrangedSubview(singIn)
-        stackViewVertical.addArrangedSubview(singUp)
-        stackViewVertical.addArrangedSubview(forgotAccess)
+        addSubview(stackVertical)
+        stackVertical.addArrangedSubview(logoBib)
+        stackVertical.addArrangedSubview(UIView())
     }
 
     ///método de inserção de constraints
     private func addConstraints() {
-        stackViewVertical.topAnchor.constraint(equalTo: self.topAnchor, constant: Metrics.Spacing.large).isActive = true
-        stackViewVertical.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Metrics.Spacing.large).isActive = true
-        stackViewVertical.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        stackViewVertical.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        stackVertical.topAnchor.constraint(equalTo: self.topAnchor, constant: Metrics.Spacing.large).isActive = true
+        stackVertical.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Metrics.Spacing.large).isActive = true
+        stackVertical.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        stackVertical.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+
+        logoBib.centerXAnchor.constraint(equalTo: stackVertical.centerXAnchor).isActive = true
+
     }
 
     @objc private func singUpAction() {

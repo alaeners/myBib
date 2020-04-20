@@ -26,16 +26,20 @@ class LoginBibViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
         super.viewWillAppear(animated)
     }
 
     private func setup() {
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
+
         contentSetup()
     }
 
     #warning("Qual a diferença entre weak e unowned")
     private func contentSetup() {
+        view.addSubview(contentView)
+        
         contentView.singInBlock = { [unowned self] in
             print("devia acontecer alguma coisa aqui")
         }
